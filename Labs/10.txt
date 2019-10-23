@@ -1,0 +1,24 @@
+/*ƒана последовательность целых чисел и количество членов в последовательности. ¬ычислить количество отрицательных чисел в последовательности. */
+
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <locale.h> 
+#include <conio.h> 
+
+int main() 
+{ 
+setlocale (LC_ALL, "Rus"); 
+int k, kol=0, i; 
+printf("¬ведите количество членов в последовательности:\n"); 
+scanf("%d", &k); 
+int mas[k]; 
+printf("¬ведите последовательность:\n"); 
+for (i=0; i<k; i++) 
+scanf("%d", &mas[i]); 
+for (i=0; i<k; i++) 
+if (mas[i]<0) 
+kol++; 
+printf(" оличество положительных чисел в последовательности = %d", kol); 
+_getch(); 
+return 0; 
+}

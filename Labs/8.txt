@@ -1,0 +1,58 @@
+/*Дана последовательность целых чисел. Признак конца строки число 666. Вычислить сумму положительных чисел в последовательности. */
+
+/*bez ucheta 666*/
+
+#include<stdio.h>
+
+main()
+{
+int S, sum=0;
+
+printf("Vvedite chisla:\n");
+scanf ("%d", &S);
+
+if (S==666)
+    printf ("V posledovatel'nosti net chisel, tol'ko 666");
+    else
+    {
+        while (S!=666)
+        {
+            if((S>0)&&(S!=666))
+                sum = sum+S;
+            scanf ("%d", &S);
+        }
+        printf ("Summa polojitelnikh chisek = %d", sum);
+    }
+
+getchar();
+return 0;
+}
+
+/*s uchetom 666*/
+/*
+#include<stdio.h>
+
+main()
+{
+int S, sum=0;
+
+printf("Vvedite chisla:\n");
+scanf ("%d", &S);
+
+if (S==666)
+    printf ("V posledovatel'nosti net chisel, tol'ko 666");
+    else
+    {
+        while (S!=666)
+        {
+            if(S>0)
+                sum = sum+S;
+            scanf ("%d", &S);
+        }
+        printf ("Summa polojitelnikh chisek = %d", sum);
+    }
+
+getchar();
+return 0;
+}
+*/

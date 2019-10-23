@@ -1,0 +1,31 @@
+/*ƒана последовательность целых чисел и количество членов в последовательности. ¬ычислить есть ли в последовательности число 0. */
+
+#include<stdio.h>
+#include<math.h>
+main()
+{
+int i, kol,k=0;
+
+printf("Vveite kolichestvo chisel: \n");
+scanf("%d", &kol);
+
+int chisla[kol];
+
+printf("Vvedite chisla: \n");
+for (i = 0;i<kol;i++)
+    scanf("%d", &chisla[i]);
+
+for (i = 0;i<kol;i++)
+{
+    if (chisla[i] == 0)
+        k++;
+}
+
+if (k>0)
+    printf("V posledovatel'nosti est' 0");
+else
+    printf("V posledovatel'nosti net 0");
+
+getchar();
+return 0;
+}

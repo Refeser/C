@@ -1,0 +1,31 @@
+/*ѕризнак конца последовательности S-0. ¬ычислить количество чисел 3 в последовательности и сумму отрицательных чисел. */
+
+#include<stdio.h>
+
+main()
+{
+int S;
+int minus=0,tri=0;
+
+printf("Vvedite chisla:\n");
+scanf ("%d", &S);
+
+if (S==0)
+    printf ("Chisel 3 v posledovatel'nosti net, kak i otricatelnikh chisel!");
+    else
+    {
+        while (S!=0)
+        {
+            scanf ("%d", &S);
+            if (S == 3)
+                tri++;
+            else
+                if(S<0)
+                    minus += S;
+        }
+        printf ("Cifr 3 v posledovatel'nosti %d shtuk \n Summa otricatelnikh chisel = %d", tri, minus);
+    }
+
+getchar();
+return 0;
+}

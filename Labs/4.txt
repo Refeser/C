@@ -1,0 +1,28 @@
+/*ƒана последовательность целых чисел и количество членов последовательности. ¬ычислить произведение чисел кратных 5 в последовательности. */
+
+#include<stdio.h>
+#include<math.h>
+main()
+{
+int i, proizv = 1, kol;
+
+printf("Vveite kolichestvo chisel: \n");
+scanf("%d", &kol);
+
+int chisla[kol];
+
+printf("Vvedite chisla: \n");
+for (i = 0;i<kol;i++)
+scanf("%d", &chisla[i]);
+
+for (i = 0;i<kol;i++)
+{
+if (chisla[i] % 5 == 0)
+proizv *= chisla[i];
+}
+
+printf("Proizvedenie chisel, kratnih 5 = %d", proizv);
+
+getchar();
+return 0;
+}
